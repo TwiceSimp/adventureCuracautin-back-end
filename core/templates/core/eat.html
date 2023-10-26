@@ -1,0 +1,117 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Donde Comer{% endblock %}
+
+{% block content %}
+
+{% block styles %}
+    <!-- Agrega estilos adicionales específicos de la página -->
+    <link rel="stylesheet" href="{% static 'core/css/eat.css' %}" />
+{% endblock %}
+
+<body>
+    <!--HEADER-->
+    <header class="header white">
+        <div class="container vh-50">
+            <!--Description-->
+            <div class="row  h-100 align-items-end">
+                <div class="col-md-10 col-lg-6 text-white">
+                    <!--Title-->
+                    <h1 class="text-capitalize">
+                        <span class="text-info h5">Ven a vivir tu </span> <br> restaurantes
+                    </h1>
+                    <!--Description-->
+                    <p>
+                        Te llevaremos a un viaje culinario por los diversos restaurantes de Curacautín. Desde delicias locales en acogedores cafés hasta experiencias gastronómicas en restaurantes con encanto, esta recopilación te invita a saborear la autenticidad de la cocina local. Descubre los lugares más deliciosos y sumérgete en una experiencia gastronómica única en Curacautín. ¡Buen provecho!
+                    </p>
+                    <!--Button-->
+                </div>
+            </div>
+        </div>
+        <img src="{% static 'core/img/cuts/cut-header.svg'%}" alt="">
+    </header>
+
+    <!--SECTION FOUR RESTAURANTS-->
+    <section class="container mt-5">
+
+        <div class="row">
+            <!--Title-->
+            <div class="col-12 text-center">
+                <h3 class="text-info">Restaurantes</h3>
+            </div>
+        </div>
+        <!--Paragraph-->
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="text-muted">Prueba las comidas de la zona en los mejores restaurantes de Curacautín</p>
+            </div>
+        </div>
+        <!--accomodations cards-->
+        <div class="row justify-content-center justify-content-lg-between mb-5">
+            <!--card 1-->
+            <article class="card shadow my-1" style="width: 16rem;">
+                <div class="box-card-img">
+                    <img src="{% static 'core/img/restaurants/img1.jpg'%}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Salto la princesa</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="destinations_detail.html" class="btn btn-info">Go somewhere</a>
+                </div>
+            </article>
+            <!--card 2-->
+            <article class="card shadow my-1" style="width: 16rem;">
+                <div class="box-card-img">
+                    <img src="{% static 'core/img/restaurants/img2.jpeg'%}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Volcan Llaima</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="destinations_detail.html" class="btn btn-info">Go somewhere</a>
+                </div>
+            </article>
+            <!--card 3-->
+            <article class="card shadow my-1" style="width: 16rem;">
+                <div class="box-card-img">
+                    <img src="{% static 'core/img/restaurants/img3.jpg'%}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Corralco</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="destinations_detail.html" class="btn btn-info">Go somewhere</a>
+                </div>
+            </article>
+            <!--card 4-->
+            <article class="card shadow my-1" style="width: 16rem;">
+                <div class="box-card-img">
+                    <img src="{% static 'core/img/restaurants/img4.jpg'%}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Salto del indio</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="destinations_detail.html" class="btn btn-info">Go somewhere</a>
+                </div>
+            </article>
+
+        </div>
+
+        <!--Accordions-->
+        <div class="row">
+
+        </div>
+    </section>
+    {% endblock %}
+
+
+
+
+
+</body>
+
+</html>

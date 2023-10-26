@@ -1,0 +1,115 @@
+<title>{% block title %}{% endblock %} | AdventureCuracautin</title>
+
+
+  
+      
+        {% load static %}
+        <!-- CSS Bootstrap -->
+        <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}" />
+        <!-- tylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+        <!--ICONS-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <!-- CSS Main -->
+        {% block styles %}
+        <link rel="stylesheet" href="{% static 'core/css/main.css' %}" />
+        <link rel="stylesheet" href="{% static 'core/css/destinations.css'%}" />
+        <link rel="stylesheet" href="{% static 'core/css/eat.css'%}" />
+        <link rel="stylesheet" href="{% static 'core/css/accomodation.css'%}" />
+        <link rel="stylesheet" href="{% static 'core/css/events.css'%}" />
+        <link rel="stylesheet" href="{% static 'core/css/contact.css'%}" />
+        <link rel="stylesheet" href="{% static 'core/css/us.css'%}" />
+        {% endblock %}
+
+
+
+<!--Navbar-->
+<header class="header white">
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-md navbar-dark bg-info-edit p-0">
+    <!--Anclas-->
+    <div class="collapse navbar-collapse text-capitalize" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Iniciar Sesion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="destinations.html">Registrarse</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<nav class="navbar navbar-expand-md navbar-dark bg-info">
+    <!--Logo-->
+    <a class="navbar-brand" href="#">
+      <img src="{% static 'core/img/logo-page.png'%}" alt="Logo Pagina Curacautin" class="img-logo-page">
+    </a>
+    <!--Button-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--Anclas-->
+    <div class="collapse navbar-collapse text-capitalize" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active {% if request.path == '/' %} active{% endif %}">
+          <a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
+        </li>
+        <li class="nav-item {% if request.path == '/destinations/' %} active{% endif %}">
+          <a class="nav-link" href="{% url 'destinos' %}">Destinos</a>
+        </li>
+        <li class="nav-item dropdown"> <!-- Agregar la clase 'dropdown' al elemento li -->
+          <a class="nav-link dropdown-toggle" href="#" id="destinosDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Donde?
+          </a>
+          <div class="dropdown-menu bg-info {% if request.path == '/eat/' %} active{% endif %} {% if request.path == '/accommodation/' %} active{% endif %}" aria-labelledby="destinosDropdown">
+            <a class="dropdown-item text-white" href="{% url 'comer' %}">Comer</a>
+            <a class="dropdown-item text-white" href="{% url 'dormir' %}">Alojarse</a>
+          </div>
+        </li>
+        <li class="nav-item {% if request.path == '/events/' %} active{% endif %}">
+          <a class="nav-link" href="{% url 'eventos' %}">Eventos</a>
+        </li>
+        <li class="nav-item {% if request.path == '/us/' %} active{% endif %}">
+          <a class="nav-link" href="{% url 'nosotros' %}">Nosotros</a>
+        </li>
+        <li class="nav-item {% if request.path == '/contact/' %} active{% endif %}">
+          <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  {% block content %} {% endblock %}
+
+    <!--SECTION FOUR FOOTER-->
+    <footer class="bg-info text-white">
+        <div class="container text-white ">
+        <div class="row d-flex align-items-center justify-content-md-center">
+            <!--Logo-->
+            <a href="" class="col-md-2 col-lg-4 text-center">
+            <img src="{% static 'core/img/logo-page.png'%}" alt="" class="img-logo-page">
+            </a>
+            <!--Icons Social-->
+            <div class=" col-md-2 col-lg-4 text-center">
+            <a href="" class="text-reset"><i class='bx bxl-whatsapp'></i></a>
+            <a href="" class="text-reset"><i class='bx bxl-facebook'></i></a>
+            <a href="" class="text-reset"><i class='bx bxl-instagram'></i></a>
+            </div>
+            <!--privacy policies-->
+            <div class=" col-md-8 col-lg-4 text-center">
+            <a href="" class="text-reset">Politicas de privacidad</a>
+            -
+            <a href="" class="text-reset">Cookies</a>
+            -
+            <a href="" class="text-reset">Aviso Legal</a>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <!-- Jquery -->
+    <script src="{% static 'core/js/jquery-3.5.0.min.js' %}"></script>
+    <!-- Popper -->
+    <script src="{% static 'core//js/popper.min.js' %}"></script>
+    <!-- JS Bootstrap -->
+    <script src="{% static 'core//js/bootstrap.min.js' %}"></script>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destinos</title>
+    <!-- CSS Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- CDN Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <!--ICONS-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- CSS Main -->
+    <link rel="stylesheet" href="./css/destinations.css" />
+</head>
+
+<body>
+    <!--HEADER-->
+    <header class="header white">
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-md navbar-dark bg-info">
+            <!--Logo-->
+            <a class="navbar-brand" href="#">
+                <img src="./img/logo-page.png" alt="Logo Pagina Curacautin" class="img-logo-page">
+            </a>
+            <!--Button-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Anclas-->
+            <div class="collapse navbar-collapse text-capitalize" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="destinations.html">Destinos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="us.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--SECTION ONE INFO-->
+    <section class="container">
+        <!--Title-->
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="text-info">DESTINOS TURÍSTICOS</h2>
+            </div>
+        </div>
+        <!--Description-->
+        <div class="row">
+            <!--Article text-->
+            <article class="col-12 col-lg-6">
+                <h3 class="text-info">Parque congullio</h3>
+                <!--Alert-->
+                <p class="alert alert-success" role="alert">Apto para discapacitados</p>
+                <p class="text-muted p_info">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit exercitationem provident ex magni
+                    sequi eius a! Maxime pariatur praesentium asperiores necessitatibus amet, reprehenderit facilis sed
+                    modi veniam iste veritatis. Alias!
+                </p>
+                <p class="text-muted p_info">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit exercitationem provident ex magni
+                    sequi eius a! Maxime pariatur praesentium asperiores necessitatibus amet, reprehenderit facilis sed
+                    modi veniam iste veritatis. Alias!
+                </p>
+            </article>
+            <!--Big image-->
+            <div class="col-12 col-lg-6 ful-img" id="fulImgBox">
+                <img src="./img/destinations/img2.jpg" class="img-fluid shadow  p-3 mb-5 bg-body rounded" id="fulImg"
+                    alt="...">
+            </div>
+            
+        </div>
+        <!--images-->
+        <div class="row my-5 box-imgages d-flex justify-content-center ">
+            <img src="./img/destinations/img2.jpg" class="img-fluid col-3 col-lg-2 m-1" onclick="openFulImg(this.src)" alt="...">
+            <img src="./img/destinations/img3.jpg" class="img-fluid col-3 col-lg-2 m-1" onclick="openFulImg(this.src)" alt="...">
+            <img src="./img/destinations/img4.jpg" class="img-fluid col-3 col-lg-2 m-1" onclick="openFulImg(this.src)" alt="...">
+            <img src="./img/destinations/img5.webp" class="img-fluid col-3 col-lg-2 m-1" onclick="openFulImg(this.src)" alt="...">
+            <img src="./img/destinations/img6.webp" class="img-fluid col-3 col-lg-2 m-1" onclick="openFulImg(this.src)" alt="...">
+            <img src="./img/destinations/img7.jpg" class="img-fluid col-3 col-lg-2 m-1" onclick="openFulImg(this.src)" alt="...">
+            <img src="./img/destinations/img2.jpg" class="img-fluid col-3 col-lg-2 m-1" onclick="openFulImg(this.src)" alt="...">
+            <img src="./img/destinations/img3.jpg" class="img-fluid col-3 col-lg-2 m-1" onclick="openFulImg(this.src)" alt="...">
+            <img src="./img/destinations/img4.jpg" class="img-fluid col-3 col-lg-2 m-1" onclick="openFulImg(this.src)" alt="...">
+            
+        </div>
+        <!--Line-->
+        <hr>
+    </section>
+
+    <!--SECTION TWO FOOTER-->
+    <footer class="bg-info text-white">
+        <div class="container text-white ">
+            <div class="row d-flex align-items-center justify-content-md-center">
+                <!--Logo-->
+                <a href="" class="col-md-2 col-lg-4 text-center">
+                    <img src="./img/logo-page.png" alt="" class="img-logo-page">
+                </a>
+                <!--Icons Social-->
+                <div class=" col-md-2 col-lg-4 text-center">
+                    <a href="" class="text-reset"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="" class="text-reset"><i class='bx bxl-facebook'></i></a>
+                    <a href="" class="text-reset"><i class='bx bxl-instagram'></i></a>
+                </div>
+                <!--privacy policies-->
+                <div class=" col-md-8 col-lg-4 text-center">
+                    <a href="" class="text-reset">Politicas de privacidad</a>
+                    -
+                    <a href="" class="text-reset">Cookies</a>
+                    -
+                    <a href="" class="text-reset">Aviso Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Jquery -->
+    <script src="./js/jquery-3.5.0.min.js"></script>
+    <!-- Popper -->
+    <script src="./js/popper.min.js"></script>
+    <!-- JS Bootstrap -->
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+</html>

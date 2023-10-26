@@ -1,0 +1,59 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Contactanos{% endblock %}
+
+{% block content %}
+
+{% block styles %}
+    <!-- Agrega estilos adicionales específicos de la página -->
+    <link rel="stylesheet" href="{% static 'core/css/contact.css' %}" />
+{% endblock %}
+
+<body>
+
+    <!--SECTION ONE FORM-->
+    <div class="container">
+        <div class="row">
+            <!--title-->
+            <div class="col-12  text-center text-info my-2">
+                <h2>Contactenos</h2>
+            </div>
+        </div>
+        <!--form-->
+        <form action="">
+            <div class="row d-flex justify-content-center">
+                <!--name-->
+                <div class="col-7 mb-3">
+                    <label for="name" class="form-label">
+                        <i class='bx bxs-user'></i>
+                    </label>
+                    <input type="text" class="form-control" id="name" placeholder="Nombre">
+                </div>
+                <!--email-->
+                <div class="col-7 mb-3">
+                    <label for="email" class="form-label">
+                        <i class='bx bxs-envelope'></i>
+                    </label>
+                    <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+                <!--password-->
+                <div class="col-7 mb-3">
+                    <label for="email" class="form-label">
+                        <i class='bx bxs-message-square-dots'></i>
+                    </label>
+                    <textarea class="form-control" id="" cols="30" rows="10" placeholder="Escriba aqui..."></textarea>
+                </div>
+                <input type="submit" value="Enviar" class="col-7 btn btn-info m-auto">
+            </div>
+
+        </form>
+    </div>
+    {% endblock %}
+
+   
+
+</body>
+
+</html>

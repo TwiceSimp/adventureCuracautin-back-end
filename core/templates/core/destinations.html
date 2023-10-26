@@ -1,0 +1,159 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Destinos{% endblock %}
+
+{% block styles %}
+    <!-- Agrega estilos adicionales específicos de la página -->
+    <link rel="stylesheet" href="{% static 'core/css/destinations.css' %}" />
+{% endblock %}
+
+{% block content %}
+</head>
+
+<body>
+    <!--HEADER-->
+    <header class="header white">
+
+        <div class="container vh-50">
+            <!--Description-->
+            <div class="row  h-100 align-items-end">
+                <div class="col-md-10 col-lg-6 text-white">
+                    <!--Title-->
+                    <h1 class="text-capitalize">
+                        <span class="text-info h5">Encuentra Tus Mejores</span> <br> Destinos
+                    </h1>
+                    <!--Description-->
+                    <p>
+                        Descubre los destinos mágicos de Curacautín. Desde montañas imponentes hasta rincones llenos de historia, cada lugar tiene algo especial que ofrecer. ¡Explora y enamórate de la belleza única de este rincón chileno!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img src="{% static 'core/img/cuts/cut-header.svg' %}" alt="">
+    </header>
+
+    <!--SECTION ONE INFO-->
+    <section class="container">
+        <!--Title-->
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="text-info">DESTINOS TURÍSTICOS</h2>
+            </div>
+        </div>
+        <!--Description-->
+        <div class="row">
+            <!--Article text-->
+            <article class="col-12 col-lg-6">
+                <h3 class="text-info">Parque congullio</h3>
+                <!--Alert-->
+                <p class="alert alert-success" role="alert">Apto para discapacitados</p>
+                <p class="text-muted p_info">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit exercitationem provident ex magni
+                    sequi eius a! Maxime pariatur praesentium asperiores necessitatibus amet, reprehenderit facilis sed
+                    modi veniam iste veritatis. Alias!
+                </p>
+                <p class="text-muted p_info">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit exercitationem provident ex magni
+                    sequi eius a! Maxime pariatur praesentium asperiores necessitatibus amet, reprehenderit facilis sed
+                    modi veniam iste veritatis. Alias!
+                </p>
+            </article>
+            <!--Big image-->
+            <div class="col-12 col-lg-6 ful-img" id="fulImgBox">
+                <img src="{% static 'core/img/destinations/img2.jpg' %}" class="img-fluid shadow  p-3 mb-5 bg-body rounded" id="fulImg"
+                    alt="...">
+            </div>
+            
+        </div>
+        <!--images-->
+        <div class="row my-5 box-imgages d-flex justify-content-center ">
+            <img src="{% static 'core/img/destinations/img2.jpg' %}" class="img-fluid col-3 col-lg-2 m-1" onclick="openFulImg(this.src)" alt="...">
+            <img src="{% static 'core/img/destinations/img3.jpg' %}" class="img-fluid col-3 col-lg-2 m-1" onclick="openFulImg(this.src)" alt="...">
+            <img src="{% static 'core/img/destinations/img4.jpg' %}" class="img-fluid col-3 col-lg-2 m-1" onclick="openFulImg(this.src)" alt="...">
+            <img src="{% static 'core/img/destinations/img5.webp' %}" class="img-fluid col-3 col-lg-2 m-1" onclick="openFulImg(this.src)" alt="...">
+            <img src="{% static 'core/img/destinations/img6.webp' %}" class="img-fluid col-3 col-lg-2 m-1" onclick="openFulImg(this.src)" alt="...">
+            <img src="{% static 'core/img/destinations/img7.jpg' %}" class="img-fluid col-3 col-lg-2 m-1" onclick="openFulImg(this.src)" alt="...">
+            <img src="{% static 'core/img/destinations/img2.jpg' %}" class="img-fluid col-3 col-lg-2 m-1" onclick="openFulImg(this.src)" alt="...">
+            <img src="{% static 'core/img/destinations/img3.jpg' %}" class="img-fluid col-3 col-lg-2 m-1" onclick="openFulImg(this.src)" alt="...">
+            <img src="{% static 'core/img/destinations/img4.jpg' %}" class="img-fluid col-3 col-lg-2 m-1" onclick="openFulImg(this.src)" alt="...">
+            
+        </div>
+        <!--Line-->
+        <hr>
+    </section>
+
+    <!--SECTION TWO DESTINATIONS-->
+    <section class="container mt-5">
+        <div class="row">
+            <!--Title-->
+            <div class="col-12 text-center">
+                <h3 class="text-info">Destinos</h3>
+            </div>
+        </div>
+        <!--Paragraph-->
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="text-muted">¿Estás pensando en viajar a Curacautín? Conoce más sobre los increíbles lugares
+                    turísticos que te esperan.</p>
+            </div>
+        </div>
+        <!--Destinations cards-->
+        <div class="row justify-content-center justify-content-lg-between mb-5">
+            <!--card 1-->
+            <article class="card shadow my-1" style="width: 16rem;">
+                <div class="box-card-img">
+                    <img src="{% static 'core/img/destinations/img8.jpg'%}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Salto la princesa</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="destinations_detail.html" class="btn btn-info">Go somewhere</a>
+                </div>
+            </article>
+            <!--card 2-->
+            <article class="card shadow my-1" style="width: 16rem;">
+                <div class="box-card-img">
+                    <img src="{% static 'core/img/destinations/img9.jpg'%}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Volcan Llaima</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="destinations_detail.html" class="btn btn-info">Go somewhere</a>
+                </div>
+            </article>
+            <!--card 3-->
+            <article class="card shadow my-1" style="width: 16rem;">
+                <div class="box-card-img">
+                    <img src="{% static 'core/img/destinations/img10.jpg'%}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Corralco</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="destinations_detail.html" class="btn btn-info">Go somewhere</a>
+                </div>
+            </article>
+            <!--card 4-->
+            <article class="card shadow my-1" style="width: 16rem;">
+                <div class="box-card-img">
+                    <img src="{% static 'core/img/destinations/img11.jpg'%}" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Salto del indio</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="destinations_detail.html" class="btn btn-info">Go somewhere</a>
+                </div>
+            </article>
+        </div>
+        <hr class="">
+    </section>
+
+    {% endblock %}
+</body>
+
+</html>
